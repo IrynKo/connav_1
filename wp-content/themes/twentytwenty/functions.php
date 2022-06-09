@@ -33,13 +33,13 @@
  *
  * @since Twenty Twenty 1.0
  */
-function generate_course_type() {
+function generate_article_type() {
     $labels = array(
-        'name'                  => 'Courses',
-        'singular_name'         => 'Course',
+        'name'                  => 'Articles',
+        'singular_name'         => 'Article',
     );
     $args = array(
-        'label'                 => 'Course',
+        'label'                 => 'Article',
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'custom-fields' ),
         'taxonomies'            => array( 'category', 'post_tag' ),
@@ -47,19 +47,44 @@ function generate_course_type() {
         'public'                => true,
         'capability_type'       => 'page',
         'show_in_rest'          => true,
-        'rest_base'             => 'courses',
+        'rest_base'             => 'articles',
     );
 	register_post_type( 'course_type', $args );
 	$meta_args = array(
         'type'         => 'number',
-        'description'  => 'The price of a course.',
+        'description'  => 'The price of a article.',
         'single'       => true,
         'show_in_rest' => true,
     );
-	register_post_meta( 'course_type', 'price', $meta_args );
+	register_post_meta( 'article_type', 'price', $meta_args );
 }
-add_action( 'init', 'generate_course_type', 0 );
-
+add_action( 'init', 'generate_blog_type', 0 );
+function generate_article_type() {
+    $labels = array(
+        'name'                  => 'Blog',
+        'singular_name'         => 'Blog',
+    );
+    $args = array(
+        'label'                 => 'Blog',
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'custom-fields' ),
+        'taxonomies'            => array( 'category', 'post_tag' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'capability_type'       => 'page',
+        'show_in_rest'          => true,
+        'rest_base'             => 'articles',
+    );
+	register_post_type( 'blog_type', $args );
+	$meta_args = array(
+        'type'         => 'number',
+        'description'  => 'The price of a article.',
+        'single'       => true,
+        'show_in_rest' => true,
+    );
+	register_post_meta( 'blog_type', 'price', $meta_args );
+}
+add_action( 'init', 'generate_blog_type', 0 );
 
 /*function genre_meta_box() {  
 	add_meta_box(    'global-notice',    __( 'Genre', 'sitepoint' ),   
