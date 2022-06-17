@@ -49,75 +49,12 @@ function generate_article_type() {
         'show_in_rest'          => true,
         'rest_base'             => 'articles',
     );
-	register_post_type( 'course_type', $args );
-	$meta_args = array(
-        'type'         => 'number',
-        'description'  => 'The price of a article.',
-        'single'       => true,
-        'show_in_rest' => true,
-    );
-	register_post_meta( 'article_type', 'price', $meta_args );
+	register_post_type( 'article_type', $args );
 }
-add_action( 'init', 'generate_blog_type', 0 );
-function generate_article_type() {
-    $labels = array(
-        'name'                  => 'Blog',
-        'singular_name'         => 'Blog',
-    );
-    $args = array(
-        'label'                 => 'Blog',
-        'labels'                => $labels,
-        'supports'              => array( 'title', 'editor', 'custom-fields' ),
-        'taxonomies'            => array( 'category', 'post_tag' ),
-        'hierarchical'          => false,
-        'public'                => true,
-        'capability_type'       => 'page',
-        'show_in_rest'          => true,
-        'rest_base'             => 'articles',
-    );
-	register_post_type( 'blog_type', $args );
-	$meta_args = array(
-        'type'         => 'number',
-        'description'  => 'The price of a article.',
-        'single'       => true,
-        'show_in_rest' => true,
-    );
-	register_post_meta( 'blog_type', 'price', $meta_args );
-}
-add_action( 'init', 'generate_blog_type', 0 );
+add_action( 'init', 'generate_article_type', 0 );
 
-/*function genre_meta_box() {  
-	add_meta_box(    'global-notice',    __( 'Genre', 'sitepoint' ),   
-	'genre_meta_box_callback',    
-	'courses',    'side',    'low'  );}
-	
-	function genre_meta_box_callback() {  
-		global $post;  
-		$custom = get_post_custom($post->ID);  
-		$genre = $custom["genre"][0];  ?>  
-		<input style="width:100%" name="genre" value="<?php   echo $genre; ?>" />  
-		<?php};
 
-function save_genre(){  
-	global $post;  
-	update_post_meta($post->ID, "printer_category",  
-	$_POST["printer_category"]);
-};
 
-add_action( 'add_meta_boxes', 'genre_meta_box' );
-add_action( 'save_post', 'save_genre' );
-
-/*function generate_course_type() {
-    // ... previous code from generate_course_type
-    
-    $meta_args = array(
-        'type'         => 'number',
-        'description'  => 'The price of a course.',
-        'single'       => true,
-        'show_in_rest' => true,
-    );
-    register_post_meta( 'course_type', 'price', $meta_args );
-}*/
 
 add_filter('use_block_editor_for_post', 'disable_gutenberg_on_settings_page', 5, 2);
 function disable_gutenberg_on_settings_page($can, $post){
