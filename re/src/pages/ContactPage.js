@@ -6,7 +6,7 @@ import { MessageFormStyled } from "../components/messageForm/MessageFormStyled";
 const ContactPage = () => {
     const [data, setData] = useState({})
     useEffect(()=>{
-        axios.get('/wp-json/wp/v2/pages/206').then(res=>setData(res.data))
+        axios.get('https://i111191.hostde21.fornex.host/wp-json/wp/v2/pages/206').then(res=>setData(res.data))
     },[])
    
     return(
