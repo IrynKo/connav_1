@@ -8,10 +8,10 @@ export const AboutViewStyled = styled.section `
 .about-text {
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     width: 100%;
-    @media(nim-width: 767px) {
-        width: 60%;
+    @media(min-width: 767px) {
+        width: 80%;
     }
 }
 .about-text {
@@ -21,12 +21,17 @@ button {
     width: 60%;
     height: 50px;
     margin: 0 auto;
-    @media(nim-width: 767px) {
+    margin-bottom: 60px;
+    @media(min-width: 767px) {
         width: 20%;
     }
 
 }
 img {
     margin: 0 auto;
+    margin-bottom: 100px;
+}
+.about-description {
+    padding: 20px;
 }
 `

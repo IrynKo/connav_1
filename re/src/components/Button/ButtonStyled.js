@@ -8,20 +8,20 @@ width: 60%;
 cursor: point;
 @media (min-width: 320px) {
     font-size: 16px;
-    padding: 6px 24px;
+    padding: 4px 24px 6px;
 }
 @media (min-width: 768px) {
     font-size: 16px;
-    padding: 6px 26px;
+    padding: 4px 26px 6px;
 }
 @media (min-width: 1280px) {
     font-size: 18px;
-    padding: 8px 32px;
+    padding: 6px 32px 8px;
     width: 40%;
 }
 @media (min-width: 1440px) {
     font-size: 18px;
-    padding: 14px 40px;
+    padding: 12px 40px 14px;
 }
 a {
     text-decoration: none;

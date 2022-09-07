@@ -28,7 +28,7 @@ const AboutView = () => {
                <h5 className="about-text">{data?.extra_text}</h5>
               <img src={company} alt="company_illustration"/>
          </div>
-        <div dangerouslySetInnerHTML={{__html: data?.content}}/>
+        <div className="about-description" dangerouslySetInnerHTML={{__html: data?.content}}/>
      </AboutViewStyled>
      </>
  )   
