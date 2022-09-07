@@ -15,25 +15,33 @@ li:after {
     content:'';
     position: absolute;
     right: 0;
-    top: 25%;
+    top: 0;
     background-image:url(${mask});
     display: block;
     height: 25px;
     width: 15px;
     background-repeat: no-repeat;
-
+    //transform: rotate(0deg);
+    transition: transform .3s;
+    
 }
-
+li.close:after  {
+    transform: rotate(180deg);
+}
 ul, h2 {
-    width: 50%;
+    width: 100%;
     display: block;
     margin: 0 auto;
+    @media (min-width: 767px) {
+        width: 50%;
+    }
+
 
 }
 h2 {
-    width: 50%;
     text-aline: center;
     color: white;
+    margin-bottom: 30px;
 }
 p {
     display: none;
@@ -41,6 +49,9 @@ p {
 .close {
     p {
         display: block;
+        margin-top: 50px;
+        font-size: 14px;
+        font-style: italic;
     }
 }
 

@@ -48,7 +48,7 @@ a {
         margin-bottom: 20px;
     }
     @media (min-width: 1280px) {
-        margin-right: 20px;
+       // margin-right: 20px;
     }
 }
 &.btn-main:hover {

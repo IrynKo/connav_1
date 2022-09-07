@@ -131,11 +131,11 @@ p {
 h2 {
   font-family: 'Titillium-Light';
   font-size: 48px;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 h2:after {
   content: '';
+  margin-top: 20px;
   display: block;
   width: 96px;
   height: 6px;

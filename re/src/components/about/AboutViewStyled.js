@@ -9,16 +9,21 @@ export const AboutViewStyled = styled.section `
     margin: 0 auto;
     text-align: center;
     margin-bottom: 30px;
-    width: 60%;
+    width: 100%;
+    @media(nim-width: 767px) {
+        width: 60%;
+    }
 }
 .about-text {
     margin-top: 20px;
 }
 button {
-    width: 20%;
+    width: 60%;
     height: 50px;
     margin: 0 auto;
-    margin-right: 500px;
+    @media(nim-width: 767px) {
+        width: 20%;
+    }
 
 }
 img {

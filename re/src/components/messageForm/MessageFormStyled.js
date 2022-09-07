@@ -8,7 +8,7 @@ h1 {
     margin-bottom: 50px;
 }
 input, textarea {
-    width: 70%;
+    width: 100%;
     height: 35px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -16,6 +16,9 @@ input, textarea {
     padding-left: 10px;
     margin-bottom: 16px;
     border: solid 0.5px;
+    @media(min-width: 767px) {
+        width: 70%;
+    }
 }
 textarea {
     height: 100px;

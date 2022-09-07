@@ -9,8 +9,12 @@ justify-content: center;
 }
 .contact-foto {
     object-fit: cover;
+    margin-bottom: 20px;
     border-radius: 10%;
     margin-right: 30px;
+    @media(min-width: 767px) {
+        margin-bottom: 0px;
+    }
 }
 button
 {

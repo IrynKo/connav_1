@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "../components/loading/Loading";
 import Posts from "../components/posts/Posts"
 import { getPosts } from "../redux/posts/postsAction";
 
@@ -14,7 +15,7 @@ const PostsPage = () => {
     return(
         <>
        
-         {data?.loading && <p>Loading...</p>}
+       {data?.loading && <Loading/>}
             <Posts/>
         </>
     )

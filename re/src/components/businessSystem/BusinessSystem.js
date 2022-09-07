@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux"
 import BusinessSystemStyled from "./BusinessSystemStyled";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const BusinessSystem = () => {
     const [open, setOpen] = useState(false)
@@ -9,7 +11,9 @@ const BusinessSystem = () => {
     if (data?.list) {
         listItems = Object.values(data?.list)
     }
-    
+    useEffect(()=>{
+        Aos.init({duration: 500})
+    }, [])
     const openHandler = (e) => {
         let getP = e.target.closest('li').classList.toggle('close')
         setOpen(state=>!state)
@@ -18,7 +22,7 @@ const BusinessSystem = () => {
  return (
      <BusinessSystemStyled  >
          <div className="container">
-         <h2>{data?.title}</h2>
+         <h2 data-aos="fade">{data?.title}</h2>
          <ul >
             {
                 listItems?.map(item=>(

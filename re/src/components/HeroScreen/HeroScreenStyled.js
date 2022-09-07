@@ -41,7 +41,7 @@ p {
 img {
     object-fit: cover;
     object-position: right;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 .hero-btn {
     display: flex;

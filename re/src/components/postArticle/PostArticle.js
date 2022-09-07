@@ -8,8 +8,8 @@ const PostArticle = ({ article }) => {
   return (
     <PostArticleStyled >
       <Link to={"/posts/" + article.id}>
-        <img  className="mb-2 product-item__img" src={article.acf.image.url} alt={article.acf.title} />
-      <h6 className="product-item__name">{article.acf.title} </h6>
+        <img  className="product-item__img" src={article.acf.image.url} alt={article.acf.title} />
+      <h5 className="product-item__name">{article.acf.title} </h5>
       </Link>
          </PostArticleStyled>
   );
