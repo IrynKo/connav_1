@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const HeaderStyled = styled.header `
 
-margin: 20px 0 40px;
+margin: 40px 0 100px;
 .container {
     display: flex;
     justify-content: space-between;

@@ -29,12 +29,12 @@ const HeroSecondPart = ()=> {
         </div>
         <div className=''>
         {propertyNames &&
-        <ul>
+        <ul className='row'>
                 {
                     propertyNames.map(item=>(
-                        <li className='' key={item.icon.ID}>
-                        <img data-aos="fade" src={item.icon.url} alt={item.icon.title}/>
-                        <h6 data-aos="fade" className=''>{item.text}</h6>
+                        <li className='col-sm-10 col-md-4 ' key={item.icon.ID}>
+                        <img className='' data-aos="fade" src={item.icon.url} alt={item.icon.title}/>
+                        <h6 className='' data-aos="fade">{item.text}</h6>
                         </li>
                     ))
                 }

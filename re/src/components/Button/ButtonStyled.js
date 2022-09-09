@@ -51,6 +51,10 @@ a {
 &.btn-main:hover {
     color: #266554;
     background-color: #fff;
+    border: solid 1px  #266554;
+    a {
+        color: #266554;
+    }
 }
 &.btn-secondary {
     background: transparent;
