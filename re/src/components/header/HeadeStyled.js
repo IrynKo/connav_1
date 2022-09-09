@@ -24,16 +24,12 @@ margin: 20px 0 40px;
         width: 26%;
       }
 }
-.nav-menu {
-   // width: 50%;
-    //@media (min-width: 768px) {
-      //  width: 40%;
-    //}
-}
+
 .btn-main {
     width: 15%;
     padding: 6px 12px;
 }
+
 .btn-main a {
     color: white;
     font-size: 12px;
@@ -46,15 +42,12 @@ a {
     font-family: 'Titillium-Light';
     margin-right: 50px;
     text-shadow: 0.5px 0.5px #000000;
+}
+a:hover {
+    color: #266554;
+}
 
-}
-div {
-    //display: block;
-   //width: 70%;
-}
-//img {
-  // width: 40%; 
-}//
+
 .contact-btn {
     height: 34px;
     padding: 6px 24px;
@@ -66,15 +59,16 @@ div {
     font-family: 'Titillium-SemiBold';
     text-shadow: 0 0 black;
 }
+.contact-btn:hover {
+    color: #fff;
+    background-color: #266554;
+}
 .hamburger {
     display: none;
     @media (max-width: 767px) {
         display: block;
         width: 60%;
-
     }
-
-
 }
 
 .hamburger-menu {

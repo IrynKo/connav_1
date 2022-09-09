@@ -28,6 +28,15 @@ li:after {
 li.close:after  {
     transform: rotate(180deg);
 }
+li:hover:after  {
+    opacity: 0.6;
+    cursor: pointer;
+}
+h6:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 ul, h2 {
     width: 100%;
     display: block;

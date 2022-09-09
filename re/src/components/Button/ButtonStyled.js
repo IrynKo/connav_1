@@ -47,12 +47,10 @@ a {
     @media (max-width: 1279px) {
         margin-bottom: 20px;
     }
-    @media (min-width: 1280px) {
-       // margin-right: 20px;
-    }
 }
 &.btn-main:hover {
-    opacity:0.7;
+    color: #266554;
+    background-color: #fff;
 }
 &.btn-secondary {
     background: transparent;
