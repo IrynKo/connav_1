@@ -1,4 +1,4 @@
-import * as React from 'react';
+/*import * as React from 'react';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { Formik } from 'formik';
@@ -9,7 +9,7 @@ const PASSWORD = process.env.WP_APPLICATION_PASSWORD;
 const TOKEN = typeof window !== 'undefined' && window.btoa(`${USER}:${PASSWORD}`); // Convert Base64*/
 //const CF7_ID = process.env.WP_CF7_ID;
 
-const formSchema = Yup.object().shape({
+/*const formSchema = Yup.object().shape({
   formName: Yup.string().required('Required'),
   formEmail: Yup.string()
     .email('Invalid email')
@@ -48,7 +48,7 @@ const WpForm = () => {
                   Authorization: `Basic ${TOKEN}`,
                   'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8',
                 },*/
-                method: 'POST',
+               /* method: 'POST',
                 data: convertJsontoUrlencoded(values),
               });
               setState(result.data.message);
@@ -126,4 +126,4 @@ const WpForm = () => {
   );
 };
 
-export default WpForm;
+export default WpForm;*/
