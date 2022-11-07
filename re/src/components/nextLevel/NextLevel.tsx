@@ -9,7 +9,7 @@ import { IMainContent } from "../../redux/mainPage/mainPageTypes";
 interface IProperty {
     image: IIcon,
     title: string,
-    description: string
+    decription: string
 }
 interface IIcon {
     ID: number | null,
@@ -29,7 +29,7 @@ const NextLevel = () => {
         Aos.init({duration: 1000})
     }, [])
     
-
+    console.log('listItems',listItems)
       
  return (
      <NextLevelStyled  className="container">
@@ -43,7 +43,7 @@ const NextLevel = () => {
                         <img data-aos="fade" className="col-sm-12 col-md-5" src={item.image.url} alt={item.image.title}/>
                         <div data-aos="fade" className="col-sm-12 col-md-7">
                         <h6 data-aos="fade">{item.title}</h6>
-                        <p data-aos="fade">{item.description}</p>
+                        <p data-aos="fade">{item.decription}</p>
                         </div>
                     </li>
                 ))
